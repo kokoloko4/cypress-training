@@ -4,7 +4,8 @@
   "description": "This is a Workshop about Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "test:open": "cypress open"
   },
   "keywords": [
     "ui-testing",
@@ -13,5 +14,8 @@
     "cypress"
   ],
   "author": "[AndresCocunubo] <anfecoquin@hotmail.com> (https://github.com/kokoloko4)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.10.0"
+  }
 }
