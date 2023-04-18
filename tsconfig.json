@@ -6,6 +6,6 @@
     "lib": ["es5", "dom"],
     "types": ["cypress", "node"]
   },
-  "include": ["cypress/**/*.ts", "cypress.config.ts", ".eslintrc.js"],
+  "include": ["cypress/**/*.ts", "cypress.config.ts"],
   "exclude": ["node_modules/"]
 }

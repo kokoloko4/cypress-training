@@ -1,3 +1,4 @@
+/* eslint-disable semi */
 module.exports = {
   env: {
     browser: true,
@@ -5,8 +6,8 @@ module.exports = {
   },
   extends: 'standard-with-typescript',
   overrides: [],
-  parser: '@typescript-eslint/parser',
   parserOptions: {
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: 'tsconfig.json'
@@ -14,6 +15,8 @@ module.exports = {
   plugins: ['@typescript-eslint', 'cypress'],
   rules: {
     quotes: ['error'],
+    '@typescript-eslint/semi': ['error', 'always'],
+    '@typescript-eslint/space-before-function-paren': ['error', 'never'],
     'cypress/no-assigning-return-values': 'error',
     'cypress/no-unnecessary-waiting': 'error',
     'cypress/assertion-before-screenshot': 'warn',
@@ -22,4 +25,4 @@ module.exports = {
     'require-jsdoc': 'warn',
     'max-len': ['error', { code: 120 }]
   }
-}
+};
