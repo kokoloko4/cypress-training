@@ -5,7 +5,7 @@ class ShoppingCartPage {
     this.checkoutButton = '[data-test="checkout"]';
   }
 
-  checkoutCart(): void {
+  public checkoutCart(): void {
     cy.get(this.checkoutButton).click();
   }
 }

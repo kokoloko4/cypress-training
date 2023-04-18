@@ -5,7 +5,7 @@ class CheckoutCompletePage {
     this.orderCompletedTitle = '.complete-header';
   }
 
-  assertOrderCompleted(): void {
+  public assertOrderCompleted(): void {
     cy.get(this.orderCompletedTitle).should(
       'have.text',
       'Thank you for your order!'
