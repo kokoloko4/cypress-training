@@ -2,7 +2,7 @@ class OverviewPage {
   private readonly finishButton: string;
 
   constructor() {
-    this.finishButton = '.cart_footer > button#finish';
+    this.finishButton = '[data-test="finish"]';
   }
 
   finishOrder(): void {

@@ -2,7 +2,7 @@ class ShoppingCartPage {
   private readonly checkoutButton: string;
 
   constructor() {
-    this.checkoutButton = '.cart_footer > button#checkout';
+    this.checkoutButton = '[data-test="checkout"]';
   }
 
   checkoutCart(): void {
