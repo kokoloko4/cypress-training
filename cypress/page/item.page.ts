@@ -3,8 +3,7 @@ class ItemPage {
   private readonly cartButton: string;
 
   constructor() {
-    this.addCartButton =
-      '.inventory_details > .inventory_details_container > .inventory_details_desc_container > button';
+    this.addCartButton = '[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]';
     this.cartButton = '#shopping_cart_container';
   }
 

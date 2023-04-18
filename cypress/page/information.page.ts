@@ -5,10 +5,10 @@ class InformationPage {
   private readonly continueButton: string;
 
   constructor() {
-    this.firstNameInput = 'input#first-name';
-    this.lastNameInput = 'input#last-name';
-    this.zipCodeInput = 'input#postal-code';
-    this.continueButton = 'input[type="submit"]';
+    this.firstNameInput = '[data-test="firstName"]';
+    this.lastNameInput = '[data-test="lastName"]';
+    this.zipCodeInput = '[data-test="postalCode"]';
+    this.continueButton = '[data-test="continue"]';
   }
 
   fillOutInformation(
