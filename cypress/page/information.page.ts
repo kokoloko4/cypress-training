@@ -11,7 +11,7 @@ class InformationPage {
     this.continueButton = '[data-test="continue"]';
   }
 
-  fillOutInformation(
+  public fillOutInformation(
     firstName: string,
     lastName: string,
     zipCode: string

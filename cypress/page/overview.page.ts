@@ -5,7 +5,7 @@ class OverviewPage {
     this.finishButton = '[data-test="finish"]';
   }
 
-  finishOrder(): void {
+  public finishOrder(): void {
     cy.get(this.finishButton).click();
   }
 }
