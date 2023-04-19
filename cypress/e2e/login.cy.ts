@@ -21,7 +21,13 @@ describe('Login test', () => {
     productsListPage.isContainerDisplayed();
     productsListPage.addItem();
     // Assertion
-    productsListPage.verifyTitle('Sauce Labs Backpack');
-    productsListPage.verifyPrice('$29.99');
+    cy.fixture('products.json').then((products) => {
+      const product =
+        products.products[
+          Math.floor(Math.random() * products.products.length - 1)
+        ];
+      productsListPage.verifyTitle(product.productName);
+      productsListPage.verifyPrice(product.productPrice);
+    });
   });
 });

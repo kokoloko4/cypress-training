@@ -18,8 +18,11 @@ class LoginPage {
   }
 
   public signIn(): void {
-    cy.get(this.userNameField).type('standard_user');
-    cy.get(this.passwordField).type('secret_sauce');
+    cy.fixture('credentials.json').as('credentials');
+    cy.get('@credentials').then((user: any) => {
+      cy.get(this.userNameField).type(user.username);
+      cy.get(this.passwordField).type(user.password);
+    });
     cy.get(this.loginButton).click();
   }
 
