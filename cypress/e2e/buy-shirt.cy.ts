@@ -21,7 +21,7 @@ describe('Buy a black t-shirt', () => {
     loginPage.visitLoginPage();
     loginPage.signIn();
 
-    productsListPage.clickOnBlackShirt();
+    productsListPage.goToProduct('Sauce Labs Bolt T-Shirt');
     itemPage.addItemToCart();
     itemPage.goToCart();
     shoppingCartPage.checkoutCart();
