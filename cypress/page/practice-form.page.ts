@@ -85,6 +85,7 @@ class PracticeFormPage {
     const [day, month, year] = personalInformation.dateOfBirth.split(' ');
     this.assertSubmittedValue(
       'Date of Birth',
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       `${day} ${this.months[month]},${year}`
     );
     this.assertSubmittedValue(
