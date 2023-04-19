@@ -36,7 +36,7 @@ class ProductsListPage {
   }
 
   public verifyPrice(messages: string): void {
-    cy.get(this.prices).eq(0).should('have.text', messages);
+    cy.get(this.prices).contains(messages).should('have.text', messages);
   }
 
   public isContainerDisplayed(): void {

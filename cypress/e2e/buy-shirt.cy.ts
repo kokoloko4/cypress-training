@@ -18,14 +18,28 @@ const checkoutCompletePage = new CheckoutCompletePage();
 
 describe('Buy a black t-shirt', () => {
   it('then the t-shirt should be bought', () => {
+    cy.fixture('products.json').as('products');
+    cy.fixture('buyInformation.json').as('data');
     loginPage.visitLoginPage();
     loginPage.signIn();
 
-    productsListPage.goToProduct('Sauce Labs Bolt T-Shirt');
+    cy.get('@products').then((products: any) => {
+      const productName: string =
+        products.products[
+          Math.floor(Math.random() * products.products.length - 1)
+        ].productName;
+      productsListPage.goToProduct(productName);
+    });
     itemPage.addItemToCart();
     itemPage.goToCart();
     shoppingCartPage.checkoutCart();
-    informationPage.fillOutInformation('Cypress', 'Workshop', '00000');
+    cy.get('@data').then((data: any) => {
+      informationPage.fillOutInformation(
+        data.firstName,
+        data.lastName,
+        data.zipCode
+      );
+    });
     overviewPage.finishOrder();
 
     checkoutCompletePage.assertOrderCompleted();
