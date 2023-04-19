@@ -17,6 +17,7 @@ module.exports = {
     quotes: ['error'],
     '@typescript-eslint/semi': ['error', 'always'],
     '@typescript-eslint/space-before-function-paren': ['error', 'never'],
+    '@typescript-eslint/member-delimiter-style': ['error', 'never'],
     'cypress/no-assigning-return-values': 'error',
     'cypress/no-unnecessary-waiting': 'error',
     'cypress/assertion-before-screenshot': 'warn',
