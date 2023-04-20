@@ -24,10 +24,8 @@ describe('Buy a black t-shirt', () => {
     loginPage.signIn();
 
     cy.get('@products').then((products: any) => {
-      const productName: string =
-        products.products[
-          Math.floor(Math.random() * products.products.length - 1)
-        ].productName;
+      const productName: string = Cypress._.sampleSize(products.products, 1)[0]
+        .productName;
       productsListPage.goToProduct(productName);
     });
     itemPage.addItemToCart();

@@ -22,10 +22,7 @@ describe('Login test', () => {
     productsListPage.addItem();
     // Assertion
     cy.fixture('products.json').then((products) => {
-      const product =
-        products.products[
-          Math.floor(Math.random() * products.products.length - 1)
-        ];
+      const product = Cypress._.sampleSize(products.products, 1)[0];
       productsListPage.verifyTitle(product.productName);
       productsListPage.verifyPrice(product.productPrice);
     });
