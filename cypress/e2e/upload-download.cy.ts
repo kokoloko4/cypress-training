@@ -1,8 +1,9 @@
-import { UploadPage } from '../page';
+import { DownloadPage, UploadPage } from '../page';
 
 const uploadPage = new UploadPage();
+const downloadPage = new DownloadPage();
 
-describe('Upload and Download file', () => {
+describe('Upload file', () => {
   beforeEach(() => {
     uploadPage.visitUploadPage();
   });
@@ -17,5 +18,17 @@ describe('Upload and Download file', () => {
     uploadPage.uploadFileDnD('Unknown.png');
 
     uploadPage.assertTitleFileDnD('Unknown');
+  });
+});
+
+describe('Download file', () => {
+  beforeEach(() => {
+    downloadPage.visitDownloadPage();
+  });
+
+  it('then the file is downloaded', () => {
+    downloadPage.downloadImage();
+
+    downloadPage.assertFileWasDownloaded();
   });
 });
