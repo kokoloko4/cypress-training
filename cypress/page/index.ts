@@ -8,3 +8,4 @@ export { CheckoutCompletePage } from './checkout-complete.page';
 export { PracticeFormPage } from './practice-form.page';
 export { UploadPage } from './upload.page';
 export { DownloadPage } from './download.page';
+export { IframePage } from './iframe.page';

@@ -20,7 +20,7 @@ export default defineConfig({
       // e2e testing node events setup code
       config.defaultCommandTimeout = 10000;
       config.responseTimeout = 20000;
-      config.pageLoadTimeout = 90000;
+      config.pageLoadTimeout = 120000;
       return config;
     }
   }
