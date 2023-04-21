@@ -1,14 +1,16 @@
 class UploadPage {
+  private readonly baseUrl: string;
   private readonly uploadElementHTML5: string;
   private readonly uploadDnD: string;
 
   constructor() {
+    this.baseUrl = 'https://the-internet.herokuapp.com/upload';
     this.uploadElementHTML5 = '#file-upload';
     this.uploadDnD = '#drag-drop-upload';
   }
 
   public visitUploadPage(): void {
-    cy.visit('https://the-internet.herokuapp.com/upload');
+    cy.visit(this.baseUrl);
   }
 
   public uploadHTML5File(fileName: string): void {
